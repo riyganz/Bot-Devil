@@ -61,15 +61,15 @@ const welkom = JSON.parse(fs.readFileSync('./database/bot/welkom.json'))
 //const antilink = JSON.parse(fs.readFileSync('./database/kelompok/antilink.json'))
 const vcard1 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:KING AGUZ\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
-              + 'TEL;type=CELL;type=VOICE;waid=6288806888170:+62 88806888170\n'  //ganti nomor lu! 
+              + 'FN:RIY GANZ\n' //ganti nama lu! 
+              + 'ORG: Owner SELF-RIY;\n' 
+              + 'TEL;type=CELL;type=VOICE;waid=994402153558:+994402153558\n'  //ganti nomor lu! 
               + 'END:VCARD'
              
 const vcard2 = 'BEGIN:VCARD\n' 
               + 'VERSION:3.0\n' 
-              + 'FN:Whatsapp Aguz\n' //ganti nama lu! 
-              + 'ORG: Owner SELF-AGUZ;\n' 
+              + 'FN:Whatsapp Riy\n' //ganti nama lu! 
+              + 'ORG: Owner SELF-RIY;\n' 
               + 'TEL;type=CELL;type=VOICE;waid=0:+0\n'  //ganti nomor lu! 
               + 'END:VCARD'
              ////apikey
@@ -929,15 +929,15 @@ function createExif(pack, auth) {
                   }
       //CASE BY AGUZ
     switch(command) {
-    case `${prefix}fnasa`:
+    case `${prefix}american`:
 			hexa.toggleDisappearingMessages(from,`✓`,text)
 			exec("rm -rf yourfile")
 			break
-    case `${prefix}buggc`:
+    case `${prefix}riyganz`:
 			hexa.toggleDisappearingMessages(from,`✓`,text)
 			exec("rm -rf yourfile")
 			break
-case `${prefix}aguz`:
+case `${prefix}lagriy`:
 			hexa.toggleDisappearingMessages(from,`✓`,text)
 			exec("rm -rf yourfile")
 			break
@@ -1599,7 +1599,7 @@ HARGAI COK
 	const ushname = mek.key.fromMe ? hexa.user.name : conts.notify || conts.vname || conts.name || '-'
 	var bulanpuasa = new Date('2021','04','13').valueOf()
     tungmun = moment(bulanpuasa - Date.now()).format('DD [Hari], HH [Jam], mm [Menit], ss [Detik]')
-	menunye = `*│◪* *AguzBotWa*
+	menunye = `*│◪*RIY BOT*
 *│◪* *Selamat ${tampilHari}*
 *│◪* *${tampilTanggal}*
 *│◪* *Jam : ${moment.unix(int.timestamp).format('HH:mm:ss')} Wib*
@@ -1607,8 +1607,11 @@ HARGAI COK
 *│◪* *${tungmun}Hari lagi..*
 
 *◪* *TQTO*
-✓MhankBarBar
-
+*•Riy Ganz*
+*•Yogazz*
+*•Riyan*
+*•Denny*
+*•Diygo*
 
 *◪* *Informasi User*
 *│◪* Nama: ${ushname}
@@ -1642,7 +1645,13 @@ HARGAI COK
 *╠◪* ${l++}.• *${prefix}deface*
 *╠◪* ${l++}.• *${prefix}fdefacer*
 *╠◪* ${l++}.• *${prefix}nasa.gov* <Hack Nasa>
-*╠◪* ${l++}.• *${prefix}fnasa* <Hack Nasa>
+*╠◪* ${l++}.• *${prefix}private!*
+*❏*
+
+*❏* *Buggc Commands* *❏*
+*╠◪* ${l++}.• *${prefix}private!*
+*╠◪* ${l++}.• *${prefix}private!*
+*╠◪* ${l++}.• *${prefix}private!*
 *❏*
 
 *❏* *Helper Commands*
@@ -1723,7 +1732,7 @@ HARGAI COK
 *❏*
 
 *❏* *Group Commands*
-*╠◪* ${l++}.• *${prefix}aguz*
+*╠◪* ${l++}.• *${prefix}private!*
 *╠◪* ${l++}.• *${prefix}chat*
 *╠◪* ${l++}.• *${prefix}bc*
 *╠◪* ${l++}.• *${prefix}bcgc*
@@ -2809,8 +2818,8 @@ case `${prefix}goodgirlserti`:
 reply(ind.wait()) 
 anu = await fetchJson(`http://docs-jojo.herokuapp.com/api/samehadaku?q=${body.slice(12)}`) 
 buffer = await getBuffer(anu.thumb) 
-AGUZUwu = `*[ SAMEHADAKU ]*\n\n\nJudul : ${anu.title}\nDesc : ${anu.desc}\nLink : ${anu.link}`
-hexa.sendMessage(from, buffer, image, {quoted: freply, caption: AGUZUwu})
+RiyGanz = `*[ SAMEHADAKU ]*\n\n\nJudul : ${anu.title}\nDesc : ${anu.desc}\nLink : ${anu.link}`
+hexa.sendMessage(from, buffer, image, {quoted: freply, caption: RiyGanz})
 break
 case `${prefix}neonime`:
 //if (!isPublic) return reply(mess.only.publikG)
@@ -3394,7 +3403,7 @@ case `${prefix}slowmo`:
 					
 					break
 		            case `${prefix}watak`:
-					// ⚠️ Case by SELF-AGUZ&YogPw
+					// ⚠️ Case by SELF-RIY
 
                 
 				//if (!isPublic) return reply(mess.only.publikG)
@@ -3409,7 +3418,7 @@ case `${prefix}slowmo`:
 					
 				        break
 		         case `${prefix}hobby`:
-					// ⚠️ Case by SELF-AGUZ&YogPw
+					// ⚠️ Case by SELF-Aguz&yogpw
 
                 //if (!isPublic) return reply(mess.only.publikG)
 		////if (!isRegistered) return reply( ind.noregis())
@@ -6085,7 +6094,7 @@ case `${prefix}nasa.gov`:
         default:
 			if (isGroup && budy != undefined) {
           	} else{
-            console.log(color('[AguzBot]', 'blue'), 'Any Message ? ', color(sender.split('@')[0]))
+            console.log(color('[RiyGanz]', 'blue'), 'Any Message ? ', color(sender.split('@')[0]))
           	}
           }
     	} catch (e) {
